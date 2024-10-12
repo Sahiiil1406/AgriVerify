@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { useState,useEffect } from 'react';
 import { Globe } from 'lucide-react';
+import { useParams } from 'react-router-dom'
+import { ethers } from 'ethers';
+import {a} from '../../public/abi';
+const contractAddress="0x5FbDB2315678afecb367f032d93F642f64180aa3";
+
 
 const Certificate = () => {
+  const [crop,setCrop]=useState(null)
+  const {id}=useParams()
+  const getDetail=async()=>{
+    const provider=await new ethers.BrowserProvider(window.ethereum)
+    const contract=new ethers.Contract(contractAddress,a.abi,provider)
+    const data=await contract.getCrop(id)
+    setCrop(data)
+    console.log(data)
+  }
+  
+  useEffect(()=>{
+    getDetail()
+  },[])
+  
   return (
     <div className='flex justify-center items-center p-8'>
       
@@ -30,7 +49,7 @@ const Certificate = () => {
         <div className="border-b-2 border-dotted border-gray-400 mb-8"></div>
         
         <p className="text-lg mb-8">
-          This is to certify that <span className="font-bold">Apple</span> is farmed orginacally<br />
+          This is to certify that <span className="font-bold">{crop?.name}</span> is farmed orginacally<br />
           and safe to eat.It has passed all tests of <span className="font-bold">UNESCO</span>.
         </p>
         
@@ -38,7 +57,7 @@ const Certificate = () => {
         <div className="flex justify-between items-end mt-16">
           <div>
             <div className="border-b border-black w-48"></div>
-            <p className="font-semibold">Karan Arora</p>
+            <p className="font-semibold">{(crop?.farmerWallet)}</p>
           </div>
           <div>
             <p className="font-semibold">04 January 2021</p>
@@ -56,7 +75,7 @@ const Certificate = () => {
         
         {/* Certificate ID and URL */}
         <div className="absolute bottom-4 left-0 right-0 text-xs text-gray-600 flex justify-between px-12">
-          <div>Certificate ID: #00007521</div>
+          <div>Certificate ID: #{id}</div>
           <div></div>
         </div>
       </div>

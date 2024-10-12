@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Search, ShoppingCart, Phone } from 'lucide-react';
 import { Web3Auth } from "@web3auth/modal";
 import { CHAIN_NAMESPACES, WEB3AUTH_NETWORK } from "@web3auth/base";
 import { EthereumPrivateKeyProvider } from "@web3auth/ethereum-provider";
@@ -112,34 +113,44 @@ function Auth() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-3xl font-bold mb-4">Web3Auth Demo</h1>
-      {!loggedIn ? (
-        <button
-          onClick={login}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-2"
-        >
-          Login
-        </button>
-      ) : (
-        <>
-          <button
-            onClick={getUserInfo}
-            className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mb-2"
-          >
-            Get User Info
+    <div className="bg-gray-100 min-h-screen">
+    {/* Header */}
+    <header className="bg-white shadow-sm">
+      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+        <div className="flex items-center space-x-4">
+          <div className='w-20'><b className='text-green-800 h-16'>Agri</b>Verify</div>
+          <nav>
+            <ul className="flex space-x-4">
+              <li><a href="#" className="text-gray-600 hover:text-gray-900">Home</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-gray-900">About</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-gray-900">Pages</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div className="flex items-center space-x-4">
+          <Search className="text-gray-600" />
+          <button className="bg-yellow-400 text-white px-4 py-2 rounded-full flex items-center">
+            <Phone className="mr-2" />
+            <span>01234567890</span>
           </button>
-          <button
-            onClick={logout}
-            className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
-          >
-            Logout
+        </div>
+      </div>
+    </header>
+
+    {/* Hero Section */}
+    <section className="relative h-screen">
+      <img src="/landing.png" alt="Agriculture landscape" className="w-full h-full object-cover" />
+      <div className="absolute inset-0 bg-black bg-opacity-50">
+        <div className="container mx-auto px-4 h-full flex flex-col justify-center">
+          <h1 className="text-white text-5xl font-bold mb-4">Agriculture & Eco Farming:AgriVerify</h1>
+          <p className="text-white text-xl mb-8">There are many of passages of lorem ipsum, but the majori have suffered alteration in some form.</p>
+          <button className="bg-yellow-400 text-black px-6 py-3 rounded-full w-max" onClick={registerFarmer}>
+            Register
           </button>
-          
-        </>
-      )}
-    
-    </div>
+        </div>
+      </div>
+    </section>
+  </div>
   );
 }
 

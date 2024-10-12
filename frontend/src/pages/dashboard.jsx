@@ -48,7 +48,7 @@ const FarmerDashboard = () => {
     }
  useEffect(() => {
     getFarmerCrops()
- },[]);
+ },[crops]);
   return (
     <div className="bg-gray-100 min-h-screen p-8">
       <div className="max-w-6xl mx-auto">

@@ -16,6 +16,7 @@ contract AgriVerify {
         address farmerWallet;
         uint256 price;
         bool isVerified;
+        string imageHash;
     }
 
     mapping(address => Farmer) public farmers;
@@ -40,17 +41,18 @@ contract AgriVerify {
 
     function createCrop(string memory _name, uint256 _price) external onlyRegisteredFarmer {
         uint256 newCropId = cropIdCounter;
-        crops[newCropId] = Crop(newCropId, _name, msg.sender, _price, false);
+        crops[newCropId] = Crop(newCropId, _name, msg.sender, _price, false,'');
         farmerCropIds[msg.sender].push(newCropId);
         emit CropCreated(newCropId, _name, msg.sender, _price);
         cropIdCounter++;
     }
 
-    function requestVerification(uint256 _cropId) external onlyRegisteredFarmer {
+    function requestVerification(uint256 _cropId,string memory _hash) external onlyRegisteredFarmer {
         Crop storage crop = crops[_cropId];
         require(crop.farmerWallet == msg.sender, "Only the crop owner can request verification");
         require(!crop.isVerified, "Crop is already verified");
         crop.isVerified = true;
+        crop.imageHash = _hash;
         emit CropVerified(_cropId);
     }
 
