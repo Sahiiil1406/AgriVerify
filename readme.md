@@ -9,7 +9,7 @@ Video Link:https://drive.google.com/file/d/1D2XYIosfM-AVIsHxhaOuptOFJ8M3tX2J/vie
 ![Screenshot 2024-10-12 213859](https://github.com/user-attachments/assets/caedc8c2-1489-4211-97fa-3d5682272ce2)
 
 
-## Installation
+## Installation Steps-
 1.Go to contract directory
 ```
 cd contracts
