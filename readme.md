@@ -37,7 +37,8 @@ npm install
 npm run dev
 ```
 
-![Uploading Screenshot 2024-10-12 211422.png…]()
+![Screenshot 2024-10-12 211422](https://github.com/user-attachments/assets/664ba694-c398-4a96-9b07-0ec4fe891718)
+
 
 ## Tech-stack:
 1.Solidity for smart contract
