@@ -38,6 +38,8 @@ npm run dev
 ```
 
 ![Screenshot 2024-10-12 211422](https://github.com/user-attachments/assets/664ba694-c398-4a96-9b07-0ec4fe891718)
+![Screenshot 2024-10-12 213859](https://github.com/user-attachments/assets/caedc8c2-1489-4211-97fa-3d5682272ce2)
+
 
 
 ## Tech-stack:
