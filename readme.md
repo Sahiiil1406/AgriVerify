@@ -36,6 +36,9 @@ npm install
 ```
 npm run dev
 ```
+
+![Uploading Screenshot 2024-10-12 211422.png…]()
+
 ## Tech-stack:
 1.Solidity for smart contract
 2.Hardhat
