@@ -42,13 +42,14 @@ npm run dev
 3.React Js(Vite)
 
 ## Features:
-Farmer Onboarding:
-1.Build a welcoming system where farmers can easily sign up using wallet authentication and request certification for their crops. The process should be seamless, ensuring the user experience is as simple as organic farming itself.
 
-2.Certification Process:
+1. ### Farmer Onboarding:
+Build a welcoming system where farmers can easily sign up using wallet authentication and request certification for their crops. The process should be seamless, ensuring the user experience is as simple as organic farming itself.
+
+2. ### Certification Process:
 Dive into smart contracts! Implement a contract where farmers submit their crops for certification. For simplicity, assume the certifications are auto-approved. The goal is transparency and accessibility.
 
-3.QR Code Generation:
+3. ### QR Code Generation:
 Generate QR codes for certified crops. These codes should link to a beautifully simple page showing the certification details stored on the blockchain, enabling consumers to instantly trust their food.
 
 4.Upload QRcode to ipfs using Pinata And Minting a Nift.
