@@ -5,6 +5,10 @@ Imagine walking through a market, scanning a QR code on an apple, and instantly 
 
 Video Link:https://drive.google.com/file/d/1D2XYIosfM-AVIsHxhaOuptOFJ8M3tX2J/view?usp=sharing
 
+![Screenshot 2024-10-12 211422](https://github.com/user-attachments/assets/664ba694-c398-4a96-9b07-0ec4fe891718)
+![Screenshot 2024-10-12 213859](https://github.com/user-attachments/assets/caedc8c2-1489-4211-97fa-3d5682272ce2)
+
+
 ## Installation
 1.Go to contract directory
 ```
@@ -36,11 +40,6 @@ npm install
 ```
 npm run dev
 ```
-
-![Screenshot 2024-10-12 211422](https://github.com/user-attachments/assets/664ba694-c398-4a96-9b07-0ec4fe891718)
-![Screenshot 2024-10-12 213859](https://github.com/user-attachments/assets/caedc8c2-1489-4211-97fa-3d5682272ce2)
-
-
 
 ## Tech-stack:
 1.Solidity for smart contract
