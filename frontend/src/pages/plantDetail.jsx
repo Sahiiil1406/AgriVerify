@@ -8,8 +8,8 @@ import { a } from '../../public/abi.js';
 const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
 
 const pinata = new PinataSDK({
-  pinataJwt: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiJmYmFlYzVmNC0wYTJjLTRkNzEtYjRmYS0zYmIwMTc0Y2JlNmEiLCJlbWFpbCI6InN1cGVyc2VuMTRAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInBpbl9wb2xpY3kiOnsicmVnaW9ucyI6W3siZGVzaXJlZFJlcGxpY2F0aW9uQ291bnQiOjEsImlkIjoiRlJBMSJ9LHsiZGVzaXJlZFJlcGxpY2F0aW9uQ291bnQiOjEsImlkIjoiTllDMSJ9XSwidmVyc2lvbiI6MX0sIm1mYV9lbmFibGVkIjpmYWxzZSwic3RhdHVzIjoiQUNUSVZFIn0sImF1dGhlbnRpY2F0aW9uVHlwZSI6InNjb3BlZEtleSIsInNjb3BlZEtleUtleSI6Ijg2ZDc0YmMzNTA0ZjM5NDU1ZTljIiwic2NvcGVkS2V5U2VjcmV0IjoiNTdiNDU2OTRkNDZmY2JkMzRiMTdkZTVlNDlkMzAyMTUwOGJmNzk3MjY4ZDI5YjFjODM1ODc0OTBiZTVmOGRlMyIsImV4cCI6MTc2MDE2OTg2NX0.S69TmNgQzKAxD1wfzKfToBBs9GzfJhFFAKhsmeypAeI",
-  pinataGateway: "https://gateway.pinata.cloud"
+  pinataJwt: "",
+  pinataGateway: ""
 });
 
 const PlantDetail = () => {
